@@ -120,7 +120,7 @@ body {
 header {
   width: 900px;
   height: 100px;
-  color: #f3f2ec;
+  color: #b1e1eb;
   animation: sitetitle 40s linear 0s infinite normal;
   -webkit-animation: sitetitle 40s linear 0s infinite normal;
   text-align: center;
@@ -314,71 +314,71 @@ header {
   line-height: 1.8em;
   font-size: 1.3em;
   text-shadow: 1px 2px 1px black;
-  color: #b1e1eb;
+  color: #cadb2a;
   animation: sitetext 40s linear 0s infinite normal;
   -webkit-animation: sitetext 40s linear 0s infinite normal; }
 
 @-webkit-keyframes sitetext {
   0% {
-    color: #b1e1eb; }
+    color: #cadb2a; }
 
   20% {
-    color: #b1e1eb; }
+    color: #cadb2a; }
 
   25% {
-    color: #fdcc9a; }
+    color: orange; }
 
   45% {
-    color: #fdcc9a; }
+    color: orange; }
 
   50% {
-    color: #f6ec13; }
+    color: #f26722; }
 
   70% {
-    color: #f6ec13; }
+    color: #f26722; }
 
   75% {
-    color: #f3f2ec; }
+    color: #b1e1eb; }
 
   95% {
-    color: #f3f2ec; }
+    color: #b1e1eb; }
 
   100% {
-    color: #b1e1eb; } }
+    color: #cadb2a; } }
 @keyframes sitetext {
   0% {
-    color: #b1e1eb; }
+    color: #cadb2a; }
 
   20% {
-    color: #b1e1eb; }
+    color: #cadb2a; }
 
   25% {
-    color: #fdcc9a; }
+    color: orange; }
 
   45% {
-    color: #fdcc9a; }
+    color: orange; }
 
   50% {
-    color: #f6ec13; }
+    color: #f26722; }
 
   70% {
-    color: #f6ec13; }
+    color: #f26722; }
 
   75% {
-    color: #f3f2ec; }
+    color: #b1e1eb; }
 
   95% {
-    color: #f3f2ec; }
+    color: #b1e1eb; }
 
   100% {
-    color: #b1e1eb; } }
+    color: #cadb2a; } }
 footer {
   position: absolute;
   bottom: 14px;
   width: 900px;
   text-align: center;
   margin-top: 80px;
-  color: #b1e1eb;
+  color: #cadb2a;
   text-shadow: 1px 2px 1px black;
   animation: sitetext 40s linear 0s infinite normal;
   -webkit-animation: sitetext 40s linear 0s infinite normal; }
