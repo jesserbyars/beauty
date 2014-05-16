@@ -51,10 +51,10 @@ body {
     background-color: #4ac948; }
 
   25% {
-    background-color: #016735; }
+    background-color: #00cdcd; }
 
   45% {
-    background-color: #016735; }
+    background-color: #00cdcd; }
 
   50% {
     background-color: #653614; }
@@ -78,10 +78,10 @@ body {
     background-color: #4ac948; }
 
   25% {
-    background-color: #016735; }
+    background-color: #00cdcd; }
 
   45% {
-    background-color: #016735; }
+    background-color: #00cdcd; }
 
   50% {
     background-color: #653614; }
@@ -137,10 +137,10 @@ header {
     color: #cadb2a; }
 
   25% {
-    color: #1c3664; }
+    color: orange; }
 
   45% {
-    color: #1c3664; }
+    color: orange; }
 
   50% {
     color: #f26722; }
@@ -164,10 +164,10 @@ header {
     color: #cadb2a; }
 
   25% {
-    color: #1c3664; }
+    color: orange; }
 
   45% {
-    color: #1c3664; }
+    color: orange; }
 
   50% {
     color: #f26722; }
@@ -214,15 +214,15 @@ header {
 
   25% {
     background-image: url("../img/summer.png");
-    box-shadow: 2px 2px 2px #1c3664;
-    -moz-box-shadow: 2px 2px 2px #1c3664;
-    -webkit-box-shadow: 2px 2px 2px #1c3664; }
+    box-shadow: 2px 2px 2px orange;
+    -moz-box-shadow: 2px 2px 2px orange;
+    -webkit-box-shadow: 2px 2px 2px orange; }
 
   45% {
     background-image: url("../img/summer.png");
-    box-shadow: 2px 2px 2px #1c3664;
-    -moz-box-shadow: 2px 2px 2px #1c3664;
-    -webkit-box-shadow: 2px 2px 2px #1c3664; }
+    box-shadow: 2px 2px 2px orange;
+    -moz-box-shadow: 2px 2px 2px orange;
+    -webkit-box-shadow: 2px 2px 2px orange; }
 
   50% {
     background-image: url("../img/fall.png");
@@ -268,15 +268,15 @@ header {
 
   25% {
     background-image: url("../img/summer.png");
-    box-shadow: 2px 2px 2px #1c3664;
-    -moz-box-shadow: 2px 2px 2px #1c3664;
-    -webkit-box-shadow: 2px 2px 2px #1c3664; }
+    box-shadow: 2px 2px 2px orange;
+    -moz-box-shadow: 2px 2px 2px orange;
+    -webkit-box-shadow: 2px 2px 2px orange; }
 
   45% {
     background-image: url("../img/summer.png");
-    box-shadow: 2px 2px 2px #1c3664;
-    -moz-box-shadow: 2px 2px 2px #1c3664;
-    -webkit-box-shadow: 2px 2px 2px #1c3664; }
+    box-shadow: 2px 2px 2px orange;
+    -moz-box-shadow: 2px 2px 2px orange;
+    -webkit-box-shadow: 2px 2px 2px orange; }
 
   50% {
     background-image: url("../img/fall.png");
