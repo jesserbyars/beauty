@@ -1,0 +1,384 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  background-color: #4ac948;
+  animation: bg 40s linear 0s infinite normal;
+  -webkit-animation: bg 40s linear 0s infinite normal;
+  width: 100%;
+  height: 100%;
+  font-family: "Josefin Slab", serif; }
+
+@keyframes bg {
+  0% {
+    background-color: #4ac948; }
+
+  20% {
+    background-color: #4ac948; }
+
+  25% {
+    background-color: #016735; }
+
+  45% {
+    background-color: #016735; }
+
+  50% {
+    background-color: #653614; }
+
+  70% {
+    background-color: #653614; }
+
+  75% {
+    background-color: #00a6bc; }
+
+  95% {
+    background-color: #00a6bc; }
+
+  100% {
+    background-color: #4ac948; } }
+@-webkit-keyframes bg {
+  0% {
+    background-color: #4ac948; }
+
+  20% {
+    background-color: #4ac948; }
+
+  25% {
+    background-color: #016735; }
+
+  45% {
+    background-color: #016735; }
+
+  50% {
+    background-color: #653614; }
+
+  70% {
+    background-color: #653614; }
+
+  75% {
+    background-color: #00a6bc; }
+
+  95% {
+    background-color: #00a6bc; }
+
+  100% {
+    background-color: #4ac948; } }
+#contentwrapper {
+  position: relative;
+  width: 900px;
+  height: 1240px;
+  margin: 0 auto; }
+
+#tranparency {
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 1240px;
+  background: -webkit-linear-gradient(black, white);
+  background: -o-linear-gradient(black, white);
+  background: -moz-linear-gradient(black, white);
+  background: linear-gradient(black, white);
+  z-index: -1000;
+  opacity: .3; }
+
+header {
+  width: 900px;
+  height: 100px;
+  color: #f3f2ec;
+  animation: sitetitle 40s linear 0s infinite normal;
+  -webkit-animation: sitetitle 40s linear 0s infinite normal;
+  text-align: center;
+  font-size: 3em;
+  font-family: "Kotta One", serif;
+  text-shadow: 1px 2px 1px black;
+  padding-top: 20px; }
+
+@keyframes sitetitle {
+  0% {
+    color: #cadb2a; }
+
+  20% {
+    color: #cadb2a; }
+
+  25% {
+    color: #1c3664; }
+
+  45% {
+    color: #1c3664; }
+
+  50% {
+    color: #f26722; }
+
+  70% {
+    color: #f26722; }
+
+  75% {
+    color: #b1e1eb; }
+
+  95% {
+    color: #b1e1eb; }
+
+  100% {
+    color: #cadb2a; } }
+@-webkit-keyframes sitetitle {
+  0% {
+    color: #cadb2a; }
+
+  20% {
+    color: #cadb2a; }
+
+  25% {
+    color: #1c3664; }
+
+  45% {
+    color: #1c3664; }
+
+  50% {
+    color: #f26722; }
+
+  70% {
+    color: #f26722; }
+
+  75% {
+    color: #b1e1eb; }
+
+  95% {
+    color: #b1e1eb; }
+
+  100% {
+    color: #cadb2a; } }
+#featuredimage {
+  position: relative;
+  z-index: 1000;
+  opacity: 1;
+  margin: 0 auto;
+  width: 480px;
+  height: 342px;
+  margin-bottom: 28px;
+  background-image: url("../img/spring.png");
+  background-color: black;
+  box-shadow: 2px 2px 2px #cadb2a;
+  -moz-box-shadow: 2px 2px 2px #cadb2a;
+  -webkit-box-shadow: 2px 2px 2px #cadb2a;
+  animation: siteimage 40s linear 0s infinite normal;
+  -webkit-animation: siteimage 40s linear 0s infinite normal; }
+
+@-webkit-keyframes siteimage {
+  0% {
+    background-image: url("../img/spring.png");
+    box-shadow: 2px 2px 2px #cadb2a;
+    -moz-box-shadow: 2px 2px 2px #cadb2a;
+    -webkit-box-shadow: 2px 2px 2px #cadb2a; }
+
+  20% {
+    background-image: url("../img/spring.png");
+    box-shadow: 2px 2px 2px #cadb2a;
+    -moz-box-shadow: 2px 2px 2px #cadb2a;
+    -webkit-box-shadow: 2px 2px 2px #cadb2a; }
+
+  25% {
+    background-image: url("../img/summer.png");
+    box-shadow: 2px 2px 2px #1c3664;
+    -moz-box-shadow: 2px 2px 2px #1c3664;
+    -webkit-box-shadow: 2px 2px 2px #1c3664; }
+
+  45% {
+    background-image: url("../img/summer.png");
+    box-shadow: 2px 2px 2px #1c3664;
+    -moz-box-shadow: 2px 2px 2px #1c3664;
+    -webkit-box-shadow: 2px 2px 2px #1c3664; }
+
+  50% {
+    background-image: url("../img/fall.png");
+    box-shadow: 2px 2px 2px #f26722;
+    -moz-box-shadow: 2px 2px 2px #f26722;
+    -webkit-box-shadow: 2px 2px 2px #f26722; }
+
+  70% {
+    background-image: url("../img/fall.png");
+    box-shadow: 2px 2px 2px #f26722;
+    -moz-box-shadow: 2px 2px 2px #f26722;
+    -webkit-box-shadow: 2px 2px 2px #f26722; }
+
+  75% {
+    background-image: url("../img/winter.png");
+    box-shadow: 2px 2px 2px #b1e1eb;
+    -moz-box-shadow: 2px 2px 2px #b1e1eb;
+    -webkit-box-shadow: 2px 2px 2px #b1e1eb; }
+
+  95% {
+    background-image: url("../img/winter.png");
+    box-shadow: 2px 2px 2px #b1e1eb;
+    -moz-box-shadow: 2px 2px 2px #b1e1eb;
+    -webkit-box-shadow: 2px 2px 2px #b1e1eb; }
+
+  100% {
+    background-image: url("../img/spring.png");
+    box-shadow: 2px 2px 2px #cadb2a;
+    -moz-box-shadow: 2px 2px 2px #cadb2a;
+    -webkit-box-shadow: 2px 2px 2px #cadb2a; } }
+@keyframes siteimage {
+  0% {
+    background-image: url("../img/spring.png");
+    box-shadow: 2px 2px 2px #cadb2a;
+    -moz-box-shadow: 2px 2px 2px #cadb2a;
+    -webkit-box-shadow: 2px 2px 2px #cadb2a; }
+
+  20% {
+    background-image: url("../img/spring.png");
+    box-shadow: 2px 2px 2px #cadb2a;
+    -moz-box-shadow: 2px 2px 2px #cadb2a;
+    -webkit-box-shadow: 2px 2px 2px #cadb2a; }
+
+  25% {
+    background-image: url("../img/summer.png");
+    box-shadow: 2px 2px 2px #1c3664;
+    -moz-box-shadow: 2px 2px 2px #1c3664;
+    -webkit-box-shadow: 2px 2px 2px #1c3664; }
+
+  45% {
+    background-image: url("../img/summer.png");
+    box-shadow: 2px 2px 2px #1c3664;
+    -moz-box-shadow: 2px 2px 2px #1c3664;
+    -webkit-box-shadow: 2px 2px 2px #1c3664; }
+
+  50% {
+    background-image: url("../img/fall.png");
+    box-shadow: 2px 2px 2px #f26722;
+    -moz-box-shadow: 2px 2px 2px #f26722;
+    -webkit-box-shadow: 2px 2px 2px #f26722; }
+
+  70% {
+    background-image: url("../img/fall.png");
+    box-shadow: 2px 2px 2px #f26722;
+    -moz-box-shadow: 2px 2px 2px #f26722;
+    -webkit-box-shadow: 2px 2px 2px #f26722; }
+
+  75% {
+    background-image: url("../img/winter.png");
+    box-shadow: 2px 2px 2px #b1e1eb;
+    -moz-box-shadow: 2px 2px 2px #b1e1eb;
+    -webkit-box-shadow: 2px 2px 2px #b1e1eb; }
+
+  95% {
+    background-image: url("../img/winter.png");
+    box-shadow: 2px 2px 2px #b1e1eb;
+    -moz-box-shadow: 2px 2px 2px #b1e1eb;
+    -webkit-box-shadow: 2px 2px 2px #b1e1eb; }
+
+  100% {
+    background-image: url("../img/spring.png");
+    box-shadow: 2px 2px 2px #cadb2a;
+    -moz-box-shadow: 2px 2px 2px #cadb2a;
+    -webkit-box-shadow: 2px 2px 2px #cadb2a; } }
+#content {
+  width: 640px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.8em;
+  font-size: 1.3em;
+  text-shadow: 1px 2px 1px black;
+  color: #b1e1eb;
+  animation: sitetext 40s linear 0s infinite normal;
+  -webkit-animation: sitetext 40s linear 0s infinite normal; }
+
+@-webkit-keyframes sitetext {
+  0% {
+    color: #b1e1eb; }
+
+  20% {
+    color: #b1e1eb; }
+
+  25% {
+    color: #fdcc9a; }
+
+  45% {
+    color: #fdcc9a; }
+
+  50% {
+    color: #f6ec13; }
+
+  70% {
+    color: #f6ec13; }
+
+  75% {
+    color: #f3f2ec; }
+
+  95% {
+    color: #f3f2ec; }
+
+  100% {
+    color: #b1e1eb; } }
+@keyframes sitetext {
+  0% {
+    color: #b1e1eb; }
+
+  20% {
+    color: #b1e1eb; }
+
+  25% {
+    color: #fdcc9a; }
+
+  45% {
+    color: #fdcc9a; }
+
+  50% {
+    color: #f6ec13; }
+
+  70% {
+    color: #f6ec13; }
+
+  75% {
+    color: #f3f2ec; }
+
+  95% {
+    color: #f3f2ec; }
+
+  100% {
+    color: #b1e1eb; } }
+footer {
+  position: absolute;
+  bottom: 14px;
+  width: 900px;
+  text-align: center;
+  margin-top: 80px;
+  color: #b1e1eb;
+  text-shadow: 1px 2px 1px black;
+  animation: sitetext 40s linear 0s infinite normal;
+  -webkit-animation: sitetext 40s linear 0s infinite normal; }
