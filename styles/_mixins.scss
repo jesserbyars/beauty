@@ -1,0 +1,31 @@
+//mixins
+@mixin linear-gradient($c1, $c2) {
+	background: -webkit-linear-gradient($c1, $c2);
+	background: -o-linear-gradient($c1, $c2);
+	background: -moz-linear-gradient($c1, $c2);
+	background: linear-gradient($c1, $c2);
+}
+
+
+@mixin animation($name, $time, $timing, $delay, $iteration, $direction) {
+	animation: $name $time $timing $delay $iteration $direction;
+	-webkit-animation: $name $time $timing $delay $iteration $direction;
+	-moz-animation: $name $time $timing $delay $iteration $direction;
+	-o-animation: $name $time $timing $delay $iteration $direction;
+}
+
+@mixin box-shadow($px1, $px2, $px3, $col) {
+	box-shadow: $px1 $px2 $px3 $col;
+	-moz-box-shadow: $px1 $px2 $px3 $col;
+	-webkit-box-shadow: $px1 $px2 $px3 $col;
+	-o-box-shadow: $px1 $px2 $px3 $col;
+}
+
+//calculate fluid column widths by passing the number of columns and the margin size (in %)
+@mixin columnFix($columns,$margin) {
+  $totalMargin: $columns * $margin;
+  $totalContent: 100 - $totalMargin;
+  width: $totalContent / $columns;
+  margin-left: $margin / 2;
+  margin-right: $margin / 2;
+}

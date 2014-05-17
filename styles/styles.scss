@@ -18,6 +18,7 @@ $fallheader: #F26722;
 
 $black: #000000;
 $white: #ffffff;
+$lightgray: #cccccc;
 //fonts
 
 $headerstack: 'Kotta One', serif;
@@ -29,38 +30,26 @@ $summerimage: '../img/summer.png';
 $fallimage: '../img/fall.png';
 $winterimage: '../img/winter.png';
 
+//dimensions
+$contentwidth: 900px;
+$contentheight: 2100px;
+
 //includes
 @import 'reset.scss';
-
-//mixins
-@mixin linear-gradient($c1, $c2) {
-	background: -webkit-linear-gradient($c1, $c2);
-	background: -o-linear-gradient($c1, $c2);
-	background: -moz-linear-gradient($c1, $c2);
-	background: linear-gradient($c1, $c2);
-}
-
-@mixin animation($name, $time, $timing, $delay, $iteration, $direction) {
-	animation: $name $time $timing $delay $iteration $direction;
-	-webkit-animation: $name $time $timing $delay $iteration $direction;
-}
-
-@mixin box-shadow($px1, $px2, $px3, $col) {
-	box-shadow: $px1 $px2 $px3 $col;
-	-moz-box-shadow: $px1 $px2 $px3 $col;
-	-webkit-box-shadow: $px1 $px2 $px3 $col;
-}
+@import 'mixins.scss';
 
 
-//scss
+
+//scss order:(colors, dimensions, fonts, animations, misc)
 body {
-	background-color: $springbackground;
-	@include animation(bg, 40s, linear, 0s, infinite, normal);	
+	background-color: $springbackground;	
 	width: 100%;
 	height: 100%;
 	font-family: $bodystack;
+	@include animation(bg, 40s, linear, 0s, infinite, normal);
 }
 
+/*body background keyframes*/
 @keyframes bg {
 	0% {background-color: $springbackground;}
 	20% {background-color: $springbackground;}
@@ -86,27 +75,42 @@ body {
 	
 }
 
+@-moz-keyframes bg {
+	0% {background-color: $springbackground;}
+	20% {background-color: $springbackground;}
+	25% {background-color: $summerbackground;}
+	45% {background-color: $summerbackground;}
+	50% {background-color: $fallbackground;}
+	70% {background-color: $fallbackground;}
+	75% {background-color: $winterbackground;}
+	95% {background-color: $winterbackground;}
+	100% {background-color: $springbackground;}
+	
+}
+
+/*wrapper for the page's content*/
 #contentwrapper {
 	position: relative;
-	width: 900px;
-	height: 1240px;
+	width: $contentwidth;
+	height: $contentheight;
 	margin: 0 auto;
 }
 
+/*overlaid gradient transparency*/
 #tranparency {
+	opacity: .3;
+	position: absolute;
     width: 100%;
-    position: absolute;
     top: 0px;
     left: 0px;
     width: 100%;
-    height: 1240px;
-	@include linear-gradient($black, $white);
-	z-index: -1000;
-	opacity: .3;
+    height: $contentheight;
+	z-index: -1;
+	@include linear-gradient($black, $lightgray);
 }
 
 header {
-	width: 900px;
+	width: $contentwidth;
 	height: 100px;
 	color: $wintertext;
 	@include animation(sitetitle, 40s, linear, 0s, infinite, normal);
@@ -117,6 +121,7 @@ header {
 	padding-top: 20px;
 }
 
+/*header title keyframes*/
 @keyframes sitetitle {
 	0% {color: $springheader;}
 	20% {color: $springheader;}
@@ -141,18 +146,44 @@ header {
 	100% {color: $springheader;}
 }
 
+@-moz-keyframes sitetitle {
+	0% {color: $springheader;}
+	20% {color: $springheader;}
+	25% {color: $summerheader;}
+	45% {color: $summerheader;}
+	50% {color: $fallheader;}
+	70% {color: $fallheader;}
+	75% {color: $winterheader;}
+	95% {color: $winterheader;}
+	100% {color: $springheader;}
+}
+
 #featuredimage {
-	position: relative;
-	z-index: 1000;
 	opacity: 1;
-	margin: 0 auto;
+	position: relative;
 	width: 480px;
 	height: 342px;
 	margin-bottom: 28px;
+	z-index: 1;
+	margin: 0 auto;
 	background-image: url('../img/spring.png');
-	background-color: $black;
-	@include box-shadow(2px, 2px, 2px, $springheader);
 	@include animation(siteimage, 40s, linear, 0s, infinite, normal);
+	@include box-shadow(2px, 2px, 2px, $springheader);
+}
+
+/*featured image keyframes*/
+
+
+@keyframes siteimage {
+	0% {background-image: url($springimage); @include box-shadow(2px, 2px, 2px, $springheader);}
+	20% {background-image: url($springimage); @include box-shadow(2px, 2px, 2px, $springheader);}
+	25% {background-image: url($summerimage); @include box-shadow(2px, 2px, 2px, $summerheader);}
+	45% {background-image: url($summerimage); @include box-shadow(2px, 2px, 2px, $summerheader);}
+	50% {background-image: url($fallimage); @include box-shadow(2px, 2px, 2px, $fallheader);}
+	70% {background-image: url($fallimage); @include box-shadow(2px, 2px, 2px, $fallheader);}
+	75% {background-image: url($winterimage); @include box-shadow(2px, 2px, 2px, $winterheader);}
+	95% {background-image: url($winterimage); @include box-shadow(2px, 2px, 2px, $winterheader);}
+	100% {background-image: url($springimage); @include box-shadow(2px, 2px, 2px, $springheader);}
 }
 
 @-webkit-keyframes siteimage {
@@ -167,7 +198,7 @@ header {
 	100% {background-image: url($springimage); @include box-shadow(2px, 2px, 2px, $springheader);}
 }
 
-@keyframes siteimage {
+@-moz-keyframes siteimage {
 	0% {background-image: url($springimage); @include box-shadow(2px, 2px, 2px, $springheader);}
 	20% {background-image: url($springimage); @include box-shadow(2px, 2px, 2px, $springheader);}
 	25% {background-image: url($summerimage); @include box-shadow(2px, 2px, 2px, $summerheader);}
@@ -180,27 +211,17 @@ header {
 }
 
 #content {
+	color: $springtext;
+	margin: 28px auto 0 auto;
 	width: 640px;
-	margin: 0 auto;
 	text-align: center;
 	line-height: 1.8em;
 	font-size: 1.3em;
 	text-shadow: 1px 2px 1px $black;
-	color: $springtext;
 	@include animation(sitetext, 40s, linear, 0s, infinite, normal);
 }
 
-@-webkit-keyframes sitetext {
-	0% {color: $springtext;}
-	20% {color: $springtext;}
-	25% {color: $summertext;}
-	45% {color: $summertext;}
-	50% {color: $falltext;}
-	70% {color: $falltext;}
-	75% {color: $wintertext;}
-	95% {color: $wintertext;}
-	100% {color: $springtext;}
-}
+/*main font color keyframes*/
 
 @keyframes sitetext {
 	0% {color: $springtext;}
@@ -214,15 +235,97 @@ header {
 	100% {color: $springtext;}
 }
 
+@-webkit-keyframes sitetext {
+	0% {color: $springtext;}
+	20% {color: $springtext;}
+	25% {color: $summertext;}
+	45% {color: $summertext;}
+	50% {color: $falltext;}
+	70% {color: $falltext;}
+	75% {color: $wintertext;}
+	95% {color: $wintertext;}
+	100% {color: $springtext;}
+}
+@-moz-keyframes sitetext {
+	0% {color: $springtext;}
+	20% {color: $springtext;}
+	25% {color: $summertext;}
+	45% {color: $summertext;}
+	50% {color: $falltext;}
+	70% {color: $falltext;}
+	75% {color: $wintertext;}
+	95% {color: $wintertext;}
+	100% {color: $springtext;}
+}
 
 footer {
-	position: absolute;
-	bottom: 14px;
-	width: 900px;
-	text-align: center;
-	margin-top: 80px;
 	color: $springtext;
+	position: absolute;
+	width: 98%;
+	bottom: 14px;
+	margin-top: 80px;
+	text-align: center;
 	text-shadow: 1px 2px 1px $black;
 	@include animation(sitetext, 40s, linear, 0s, infinite, normal);
+}
+
+/*styles for hr elements*/
+
+hr.hrstyle {
+	border-color: $springtext;
+	border-width: 4px 0 0 0;
+	border-radius: 20px;
+	border-style: double;
+	height: 30px;
+	margin-top: 24px;
+	@include animation(hrule, 40s, linear, 0s, infinite, normal);
+}
+
+hr.hrstyle:before {
+	border-color: $springtext;
+	border-width: 0 0 4px 0;
+	border-radius: 20px;
+	border-style: double;
+	display: block;
+	height: 30px;
+	margin-top: -31px;
+	content: "";
+	@include animation(hrule, 40s, linear, 0s, infinite, normal);
+}
+
+@keyframes hrule {
+	0% {border-color: $springtext;}
+	20% {border-color: $springtext;}
+	25% {border-color: $summertext;}
+	45% {border-color: $summertext;}
+	50% {border-color: $falltext;}
+	70% {border-color: $falltext;}
+	75% {border-color: $wintertext;}
+	95% {border-color: $wintertext;}
+	100% {border-color: $springtext;}
+}
+
+@-webkit-keyframes hrule {
+	0% {border-color: $springtext;}
+	20% {border-color: $springtext;}
+	25% {border-color: $summertext;}
+	45% {border-color: $summertext;}
+	50% {border-color: $falltext;}
+	70% {border-color: $falltext;}
+	75% {border-color: $wintertext;}
+	95% {border-color: $wintertext;}
+	100% {border-color: $springtext;}
+}
+
+@-moz-keyframes hrule {
+	0% {border-color: $springtext;}
+	20% {border-color: $springtext;}
+	25% {border-color: $summertext;}
+	45% {border-color: $summertext;}
+	50% {border-color: $falltext;}
+	70% {border-color: $falltext;}
+	75% {border-color: $wintertext;}
+	95% {border-color: $wintertext;}
+	100% {border-color: $springtext;}
 }
 

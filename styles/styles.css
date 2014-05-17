@@ -37,12 +37,15 @@ table {
 
 body {
   background-color: #4ac948;
-  animation: bg 40s linear 0s infinite normal;
-  -webkit-animation: bg 40s linear 0s infinite normal;
   width: 100%;
   height: 100%;
-  font-family: "Josefin Slab", serif; }
+  font-family: "Josefin Slab", serif;
+  animation: bg 40s linear 0s infinite normal;
+  -webkit-animation: bg 40s linear 0s infinite normal;
+  -moz-animation: bg 40s linear 0s infinite normal;
+  -o-animation: bg 40s linear 0s infinite normal; }
 
+/*body background keyframes*/
 @keyframes bg {
   0% {
     background-color: #4ac948; }
@@ -97,25 +100,54 @@ body {
 
   100% {
     background-color: #4ac948; } }
+@-moz-keyframes bg {
+  0% {
+    background-color: #4ac948; }
+
+  20% {
+    background-color: #4ac948; }
+
+  25% {
+    background-color: #00cdcd; }
+
+  45% {
+    background-color: #00cdcd; }
+
+  50% {
+    background-color: #653614; }
+
+  70% {
+    background-color: #653614; }
+
+  75% {
+    background-color: #00a6bc; }
+
+  95% {
+    background-color: #00a6bc; }
+
+  100% {
+    background-color: #4ac948; } }
+/*wrapper for the page's content*/
 #contentwrapper {
   position: relative;
   width: 900px;
-  height: 1240px;
+  height: 2100px;
   margin: 0 auto; }
 
+/*overlaid gradient transparency*/
 #tranparency {
-  width: 100%;
+  opacity: .3;
   position: absolute;
+  width: 100%;
   top: 0px;
   left: 0px;
   width: 100%;
-  height: 1240px;
-  background: -webkit-linear-gradient(black, white);
-  background: -o-linear-gradient(black, white);
-  background: -moz-linear-gradient(black, white);
-  background: linear-gradient(black, white);
-  z-index: -1000;
-  opacity: .3; }
+  height: 2100px;
+  z-index: -1;
+  background: -webkit-linear-gradient(black, #cccccc);
+  background: -o-linear-gradient(black, #cccccc);
+  background: -moz-linear-gradient(black, #cccccc);
+  background: linear-gradient(black, #cccccc); }
 
 header {
   width: 900px;
@@ -123,12 +155,15 @@ header {
   color: #b1e1eb;
   animation: sitetitle 40s linear 0s infinite normal;
   -webkit-animation: sitetitle 40s linear 0s infinite normal;
+  -moz-animation: sitetitle 40s linear 0s infinite normal;
+  -o-animation: sitetitle 40s linear 0s infinite normal;
   text-align: center;
   font-size: 3em;
   font-family: "Kotta One", serif;
   text-shadow: 1px 2px 1px black;
   padding-top: 20px; }
 
+/*header title keyframes*/
 @keyframes sitetitle {
   0% {
     color: #cadb2a; }
@@ -183,142 +218,7 @@ header {
 
   100% {
     color: #cadb2a; } }
-#featuredimage {
-  position: relative;
-  z-index: 1000;
-  opacity: 1;
-  margin: 0 auto;
-  width: 480px;
-  height: 342px;
-  margin-bottom: 28px;
-  background-image: url("../img/spring.png");
-  background-color: black;
-  box-shadow: 2px 2px 2px #cadb2a;
-  -moz-box-shadow: 2px 2px 2px #cadb2a;
-  -webkit-box-shadow: 2px 2px 2px #cadb2a;
-  animation: siteimage 40s linear 0s infinite normal;
-  -webkit-animation: siteimage 40s linear 0s infinite normal; }
-
-@-webkit-keyframes siteimage {
-  0% {
-    background-image: url("../img/spring.png");
-    box-shadow: 2px 2px 2px #cadb2a;
-    -moz-box-shadow: 2px 2px 2px #cadb2a;
-    -webkit-box-shadow: 2px 2px 2px #cadb2a; }
-
-  20% {
-    background-image: url("../img/spring.png");
-    box-shadow: 2px 2px 2px #cadb2a;
-    -moz-box-shadow: 2px 2px 2px #cadb2a;
-    -webkit-box-shadow: 2px 2px 2px #cadb2a; }
-
-  25% {
-    background-image: url("../img/summer.png");
-    box-shadow: 2px 2px 2px orange;
-    -moz-box-shadow: 2px 2px 2px orange;
-    -webkit-box-shadow: 2px 2px 2px orange; }
-
-  45% {
-    background-image: url("../img/summer.png");
-    box-shadow: 2px 2px 2px orange;
-    -moz-box-shadow: 2px 2px 2px orange;
-    -webkit-box-shadow: 2px 2px 2px orange; }
-
-  50% {
-    background-image: url("../img/fall.png");
-    box-shadow: 2px 2px 2px #f26722;
-    -moz-box-shadow: 2px 2px 2px #f26722;
-    -webkit-box-shadow: 2px 2px 2px #f26722; }
-
-  70% {
-    background-image: url("../img/fall.png");
-    box-shadow: 2px 2px 2px #f26722;
-    -moz-box-shadow: 2px 2px 2px #f26722;
-    -webkit-box-shadow: 2px 2px 2px #f26722; }
-
-  75% {
-    background-image: url("../img/winter.png");
-    box-shadow: 2px 2px 2px #b1e1eb;
-    -moz-box-shadow: 2px 2px 2px #b1e1eb;
-    -webkit-box-shadow: 2px 2px 2px #b1e1eb; }
-
-  95% {
-    background-image: url("../img/winter.png");
-    box-shadow: 2px 2px 2px #b1e1eb;
-    -moz-box-shadow: 2px 2px 2px #b1e1eb;
-    -webkit-box-shadow: 2px 2px 2px #b1e1eb; }
-
-  100% {
-    background-image: url("../img/spring.png");
-    box-shadow: 2px 2px 2px #cadb2a;
-    -moz-box-shadow: 2px 2px 2px #cadb2a;
-    -webkit-box-shadow: 2px 2px 2px #cadb2a; } }
-@keyframes siteimage {
-  0% {
-    background-image: url("../img/spring.png");
-    box-shadow: 2px 2px 2px #cadb2a;
-    -moz-box-shadow: 2px 2px 2px #cadb2a;
-    -webkit-box-shadow: 2px 2px 2px #cadb2a; }
-
-  20% {
-    background-image: url("../img/spring.png");
-    box-shadow: 2px 2px 2px #cadb2a;
-    -moz-box-shadow: 2px 2px 2px #cadb2a;
-    -webkit-box-shadow: 2px 2px 2px #cadb2a; }
-
-  25% {
-    background-image: url("../img/summer.png");
-    box-shadow: 2px 2px 2px orange;
-    -moz-box-shadow: 2px 2px 2px orange;
-    -webkit-box-shadow: 2px 2px 2px orange; }
-
-  45% {
-    background-image: url("../img/summer.png");
-    box-shadow: 2px 2px 2px orange;
-    -moz-box-shadow: 2px 2px 2px orange;
-    -webkit-box-shadow: 2px 2px 2px orange; }
-
-  50% {
-    background-image: url("../img/fall.png");
-    box-shadow: 2px 2px 2px #f26722;
-    -moz-box-shadow: 2px 2px 2px #f26722;
-    -webkit-box-shadow: 2px 2px 2px #f26722; }
-
-  70% {
-    background-image: url("../img/fall.png");
-    box-shadow: 2px 2px 2px #f26722;
-    -moz-box-shadow: 2px 2px 2px #f26722;
-    -webkit-box-shadow: 2px 2px 2px #f26722; }
-
-  75% {
-    background-image: url("../img/winter.png");
-    box-shadow: 2px 2px 2px #b1e1eb;
-    -moz-box-shadow: 2px 2px 2px #b1e1eb;
-    -webkit-box-shadow: 2px 2px 2px #b1e1eb; }
-
-  95% {
-    background-image: url("../img/winter.png");
-    box-shadow: 2px 2px 2px #b1e1eb;
-    -moz-box-shadow: 2px 2px 2px #b1e1eb;
-    -webkit-box-shadow: 2px 2px 2px #b1e1eb; }
-
-  100% {
-    background-image: url("../img/spring.png");
-    box-shadow: 2px 2px 2px #cadb2a;
-    -moz-box-shadow: 2px 2px 2px #cadb2a;
-    -webkit-box-shadow: 2px 2px 2px #cadb2a; } }
-#content {
-  width: 640px;
-  margin: 0 auto;
-  text-align: center;
-  line-height: 1.8em;
-  font-size: 1.3em;
-  text-shadow: 1px 2px 1px black;
-  color: #cadb2a;
-  animation: sitetext 40s linear 0s infinite normal;
-  -webkit-animation: sitetext 40s linear 0s infinite normal; }
-
-@-webkit-keyframes sitetext {
+@-moz-keyframes sitetitle {
   0% {
     color: #cadb2a; }
 
@@ -345,6 +245,228 @@ header {
 
   100% {
     color: #cadb2a; } }
+#featuredimage {
+  opacity: 1;
+  position: relative;
+  width: 480px;
+  height: 342px;
+  margin-bottom: 28px;
+  z-index: 1;
+  margin: 0 auto;
+  background-image: url("../img/spring.png");
+  animation: siteimage 40s linear 0s infinite normal;
+  -webkit-animation: siteimage 40s linear 0s infinite normal;
+  -moz-animation: siteimage 40s linear 0s infinite normal;
+  -o-animation: siteimage 40s linear 0s infinite normal;
+  box-shadow: 2px 2px 2px #cadb2a;
+  -moz-box-shadow: 2px 2px 2px #cadb2a;
+  -webkit-box-shadow: 2px 2px 2px #cadb2a;
+  -o-box-shadow: 2px 2px 2px #cadb2a; }
+
+/*featured image keyframes*/
+@keyframes siteimage {
+  0% {
+    background-image: url("../img/spring.png");
+    box-shadow: 2px 2px 2px #cadb2a;
+    -moz-box-shadow: 2px 2px 2px #cadb2a;
+    -webkit-box-shadow: 2px 2px 2px #cadb2a;
+    -o-box-shadow: 2px 2px 2px #cadb2a; }
+
+  20% {
+    background-image: url("../img/spring.png");
+    box-shadow: 2px 2px 2px #cadb2a;
+    -moz-box-shadow: 2px 2px 2px #cadb2a;
+    -webkit-box-shadow: 2px 2px 2px #cadb2a;
+    -o-box-shadow: 2px 2px 2px #cadb2a; }
+
+  25% {
+    background-image: url("../img/summer.png");
+    box-shadow: 2px 2px 2px orange;
+    -moz-box-shadow: 2px 2px 2px orange;
+    -webkit-box-shadow: 2px 2px 2px orange;
+    -o-box-shadow: 2px 2px 2px orange; }
+
+  45% {
+    background-image: url("../img/summer.png");
+    box-shadow: 2px 2px 2px orange;
+    -moz-box-shadow: 2px 2px 2px orange;
+    -webkit-box-shadow: 2px 2px 2px orange;
+    -o-box-shadow: 2px 2px 2px orange; }
+
+  50% {
+    background-image: url("../img/fall.png");
+    box-shadow: 2px 2px 2px #f26722;
+    -moz-box-shadow: 2px 2px 2px #f26722;
+    -webkit-box-shadow: 2px 2px 2px #f26722;
+    -o-box-shadow: 2px 2px 2px #f26722; }
+
+  70% {
+    background-image: url("../img/fall.png");
+    box-shadow: 2px 2px 2px #f26722;
+    -moz-box-shadow: 2px 2px 2px #f26722;
+    -webkit-box-shadow: 2px 2px 2px #f26722;
+    -o-box-shadow: 2px 2px 2px #f26722; }
+
+  75% {
+    background-image: url("../img/winter.png");
+    box-shadow: 2px 2px 2px #b1e1eb;
+    -moz-box-shadow: 2px 2px 2px #b1e1eb;
+    -webkit-box-shadow: 2px 2px 2px #b1e1eb;
+    -o-box-shadow: 2px 2px 2px #b1e1eb; }
+
+  95% {
+    background-image: url("../img/winter.png");
+    box-shadow: 2px 2px 2px #b1e1eb;
+    -moz-box-shadow: 2px 2px 2px #b1e1eb;
+    -webkit-box-shadow: 2px 2px 2px #b1e1eb;
+    -o-box-shadow: 2px 2px 2px #b1e1eb; }
+
+  100% {
+    background-image: url("../img/spring.png");
+    box-shadow: 2px 2px 2px #cadb2a;
+    -moz-box-shadow: 2px 2px 2px #cadb2a;
+    -webkit-box-shadow: 2px 2px 2px #cadb2a;
+    -o-box-shadow: 2px 2px 2px #cadb2a; } }
+@-webkit-keyframes siteimage {
+  0% {
+    background-image: url("../img/spring.png");
+    box-shadow: 2px 2px 2px #cadb2a;
+    -moz-box-shadow: 2px 2px 2px #cadb2a;
+    -webkit-box-shadow: 2px 2px 2px #cadb2a;
+    -o-box-shadow: 2px 2px 2px #cadb2a; }
+
+  20% {
+    background-image: url("../img/spring.png");
+    box-shadow: 2px 2px 2px #cadb2a;
+    -moz-box-shadow: 2px 2px 2px #cadb2a;
+    -webkit-box-shadow: 2px 2px 2px #cadb2a;
+    -o-box-shadow: 2px 2px 2px #cadb2a; }
+
+  25% {
+    background-image: url("../img/summer.png");
+    box-shadow: 2px 2px 2px orange;
+    -moz-box-shadow: 2px 2px 2px orange;
+    -webkit-box-shadow: 2px 2px 2px orange;
+    -o-box-shadow: 2px 2px 2px orange; }
+
+  45% {
+    background-image: url("../img/summer.png");
+    box-shadow: 2px 2px 2px orange;
+    -moz-box-shadow: 2px 2px 2px orange;
+    -webkit-box-shadow: 2px 2px 2px orange;
+    -o-box-shadow: 2px 2px 2px orange; }
+
+  50% {
+    background-image: url("../img/fall.png");
+    box-shadow: 2px 2px 2px #f26722;
+    -moz-box-shadow: 2px 2px 2px #f26722;
+    -webkit-box-shadow: 2px 2px 2px #f26722;
+    -o-box-shadow: 2px 2px 2px #f26722; }
+
+  70% {
+    background-image: url("../img/fall.png");
+    box-shadow: 2px 2px 2px #f26722;
+    -moz-box-shadow: 2px 2px 2px #f26722;
+    -webkit-box-shadow: 2px 2px 2px #f26722;
+    -o-box-shadow: 2px 2px 2px #f26722; }
+
+  75% {
+    background-image: url("../img/winter.png");
+    box-shadow: 2px 2px 2px #b1e1eb;
+    -moz-box-shadow: 2px 2px 2px #b1e1eb;
+    -webkit-box-shadow: 2px 2px 2px #b1e1eb;
+    -o-box-shadow: 2px 2px 2px #b1e1eb; }
+
+  95% {
+    background-image: url("../img/winter.png");
+    box-shadow: 2px 2px 2px #b1e1eb;
+    -moz-box-shadow: 2px 2px 2px #b1e1eb;
+    -webkit-box-shadow: 2px 2px 2px #b1e1eb;
+    -o-box-shadow: 2px 2px 2px #b1e1eb; }
+
+  100% {
+    background-image: url("../img/spring.png");
+    box-shadow: 2px 2px 2px #cadb2a;
+    -moz-box-shadow: 2px 2px 2px #cadb2a;
+    -webkit-box-shadow: 2px 2px 2px #cadb2a;
+    -o-box-shadow: 2px 2px 2px #cadb2a; } }
+@-moz-keyframes siteimage {
+  0% {
+    background-image: url("../img/spring.png");
+    box-shadow: 2px 2px 2px #cadb2a;
+    -moz-box-shadow: 2px 2px 2px #cadb2a;
+    -webkit-box-shadow: 2px 2px 2px #cadb2a;
+    -o-box-shadow: 2px 2px 2px #cadb2a; }
+
+  20% {
+    background-image: url("../img/spring.png");
+    box-shadow: 2px 2px 2px #cadb2a;
+    -moz-box-shadow: 2px 2px 2px #cadb2a;
+    -webkit-box-shadow: 2px 2px 2px #cadb2a;
+    -o-box-shadow: 2px 2px 2px #cadb2a; }
+
+  25% {
+    background-image: url("../img/summer.png");
+    box-shadow: 2px 2px 2px orange;
+    -moz-box-shadow: 2px 2px 2px orange;
+    -webkit-box-shadow: 2px 2px 2px orange;
+    -o-box-shadow: 2px 2px 2px orange; }
+
+  45% {
+    background-image: url("../img/summer.png");
+    box-shadow: 2px 2px 2px orange;
+    -moz-box-shadow: 2px 2px 2px orange;
+    -webkit-box-shadow: 2px 2px 2px orange;
+    -o-box-shadow: 2px 2px 2px orange; }
+
+  50% {
+    background-image: url("../img/fall.png");
+    box-shadow: 2px 2px 2px #f26722;
+    -moz-box-shadow: 2px 2px 2px #f26722;
+    -webkit-box-shadow: 2px 2px 2px #f26722;
+    -o-box-shadow: 2px 2px 2px #f26722; }
+
+  70% {
+    background-image: url("../img/fall.png");
+    box-shadow: 2px 2px 2px #f26722;
+    -moz-box-shadow: 2px 2px 2px #f26722;
+    -webkit-box-shadow: 2px 2px 2px #f26722;
+    -o-box-shadow: 2px 2px 2px #f26722; }
+
+  75% {
+    background-image: url("../img/winter.png");
+    box-shadow: 2px 2px 2px #b1e1eb;
+    -moz-box-shadow: 2px 2px 2px #b1e1eb;
+    -webkit-box-shadow: 2px 2px 2px #b1e1eb;
+    -o-box-shadow: 2px 2px 2px #b1e1eb; }
+
+  95% {
+    background-image: url("../img/winter.png");
+    box-shadow: 2px 2px 2px #b1e1eb;
+    -moz-box-shadow: 2px 2px 2px #b1e1eb;
+    -webkit-box-shadow: 2px 2px 2px #b1e1eb;
+    -o-box-shadow: 2px 2px 2px #b1e1eb; }
+
+  100% {
+    background-image: url("../img/spring.png");
+    box-shadow: 2px 2px 2px #cadb2a;
+    -moz-box-shadow: 2px 2px 2px #cadb2a;
+    -webkit-box-shadow: 2px 2px 2px #cadb2a;
+    -o-box-shadow: 2px 2px 2px #cadb2a; } }
+#content {
+  color: #cadb2a;
+  margin: 28px auto 0 auto;
+  width: 640px;
+  text-align: center;
+  line-height: 1.8em;
+  font-size: 1.3em;
+  text-shadow: 1px 2px 1px black;
+  animation: sitetext 40s linear 0s infinite normal;
+  -webkit-animation: sitetext 40s linear 0s infinite normal;
+  -moz-animation: sitetext 40s linear 0s infinite normal;
+  -o-animation: sitetext 40s linear 0s infinite normal; }
+
+/*main font color keyframes*/
 @keyframes sitetext {
   0% {
     color: #cadb2a; }
@@ -372,13 +494,178 @@ header {
 
   100% {
     color: #cadb2a; } }
+@-webkit-keyframes sitetext {
+  0% {
+    color: #cadb2a; }
+
+  20% {
+    color: #cadb2a; }
+
+  25% {
+    color: orange; }
+
+  45% {
+    color: orange; }
+
+  50% {
+    color: #f26722; }
+
+  70% {
+    color: #f26722; }
+
+  75% {
+    color: #b1e1eb; }
+
+  95% {
+    color: #b1e1eb; }
+
+  100% {
+    color: #cadb2a; } }
+@-moz-keyframes sitetext {
+  0% {
+    color: #cadb2a; }
+
+  20% {
+    color: #cadb2a; }
+
+  25% {
+    color: orange; }
+
+  45% {
+    color: orange; }
+
+  50% {
+    color: #f26722; }
+
+  70% {
+    color: #f26722; }
+
+  75% {
+    color: #b1e1eb; }
+
+  95% {
+    color: #b1e1eb; }
+
+  100% {
+    color: #cadb2a; } }
 footer {
-  position: absolute;
-  bottom: 14px;
-  width: 900px;
-  text-align: center;
-  margin-top: 80px;
   color: #cadb2a;
+  position: absolute;
+  width: 98%;
+  bottom: 14px;
+  margin-top: 80px;
+  text-align: center;
   text-shadow: 1px 2px 1px black;
   animation: sitetext 40s linear 0s infinite normal;
-  -webkit-animation: sitetext 40s linear 0s infinite normal; }
+  -webkit-animation: sitetext 40s linear 0s infinite normal;
+  -moz-animation: sitetext 40s linear 0s infinite normal;
+  -o-animation: sitetext 40s linear 0s infinite normal; }
+
+/*styles for hr elements*/
+hr.hrstyle {
+  border-color: #cadb2a;
+  border-width: 4px 0 0 0;
+  border-radius: 20px;
+  border-style: double;
+  height: 30px;
+  margin-top: 24px;
+  animation: hrule 40s linear 0s infinite normal;
+  -webkit-animation: hrule 40s linear 0s infinite normal;
+  -moz-animation: hrule 40s linear 0s infinite normal;
+  -o-animation: hrule 40s linear 0s infinite normal; }
+
+hr.hrstyle:before {
+  border-color: #cadb2a;
+  border-width: 0 0 4px 0;
+  border-radius: 20px;
+  border-style: double;
+  display: block;
+  height: 30px;
+  margin-top: -31px;
+  content: "";
+  animation: hrule 40s linear 0s infinite normal;
+  -webkit-animation: hrule 40s linear 0s infinite normal;
+  -moz-animation: hrule 40s linear 0s infinite normal;
+  -o-animation: hrule 40s linear 0s infinite normal; }
+
+@keyframes hrule {
+  0% {
+    border-color: #cadb2a; }
+
+  20% {
+    border-color: #cadb2a; }
+
+  25% {
+    border-color: orange; }
+
+  45% {
+    border-color: orange; }
+
+  50% {
+    border-color: #f26722; }
+
+  70% {
+    border-color: #f26722; }
+
+  75% {
+    border-color: #b1e1eb; }
+
+  95% {
+    border-color: #b1e1eb; }
+
+  100% {
+    border-color: #cadb2a; } }
+@-webkit-keyframes hrule {
+  0% {
+    border-color: #cadb2a; }
+
+  20% {
+    border-color: #cadb2a; }
+
+  25% {
+    border-color: orange; }
+
+  45% {
+    border-color: orange; }
+
+  50% {
+    border-color: #f26722; }
+
+  70% {
+    border-color: #f26722; }
+
+  75% {
+    border-color: #b1e1eb; }
+
+  95% {
+    border-color: #b1e1eb; }
+
+  100% {
+    border-color: #cadb2a; } }
+@-moz-keyframes hrule {
+  0% {
+    border-color: #cadb2a; }
+
+  20% {
+    border-color: #cadb2a; }
+
+  25% {
+    border-color: orange; }
+
+  45% {
+    border-color: orange; }
+
+  50% {
+    border-color: #f26722; }
+
+  70% {
+    border-color: #f26722; }
+
+  75% {
+    border-color: #b1e1eb; }
+
+  95% {
+    border-color: #b1e1eb; }
+
+  100% {
+    border-color: #cadb2a; } }
