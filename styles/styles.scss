@@ -32,7 +32,7 @@ $winterimage: '../img/winter.png';
 
 //dimensions
 $contentwidth: 900px;
-$contentheight: 2100px;
+$contentheight: 1120px;
 
 //includes
 @import 'reset.scss';
@@ -92,7 +92,7 @@ body {
 #contentwrapper {
 	position: relative;
 	width: $contentwidth;
-	height: $contentheight;
+
 	margin: 0 auto;
 }
 
@@ -104,15 +104,15 @@ body {
     top: 0px;
     left: 0px;
     width: 100%;
-    height: $contentheight;
+	height: $contentheight;
 	z-index: -1;
 	@include linear-gradient($black, $lightgray);
 }
 
 header {
+	color: $wintertext;
 	width: $contentwidth;
 	height: 100px;
-	color: $wintertext;
 	@include animation(sitetitle, 40s, linear, 0s, infinite, normal);
 	text-align: center;
 	font-size: 3em;
@@ -163,7 +163,6 @@ header {
 	position: relative;
 	width: 480px;
 	height: 342px;
-	margin-bottom: 28px;
 	z-index: 1;
 	margin: 0 auto;
 	background-image: url('../img/spring.png');
@@ -212,7 +211,7 @@ header {
 
 #content {
 	color: $springtext;
-	margin: 28px auto 0 auto;
+	margin: 42px auto 0 auto;
 	width: 640px;
 	text-align: center;
 	line-height: 1.8em;
@@ -260,13 +259,20 @@ header {
 
 footer {
 	color: $springtext;
-	position: absolute;
+	position: relative;
 	width: 98%;
-	bottom: 14px;
-	margin-top: 80px;
+	height: 1px;
+	margin-top: 12px;
+	margin-bottom: 12px;
 	text-align: center;
 	text-shadow: 1px 2px 1px $black;
 	@include animation(sitetext, 40s, linear, 0s, infinite, normal);
+
+	p {
+		position: relative;
+		bottom: 16px;
+		text-align: center;
+	}
 }
 
 /*styles for hr elements*/
@@ -277,7 +283,7 @@ hr.hrstyle {
 	border-radius: 20px;
 	border-style: double;
 	height: 30px;
-	margin-top: 24px;
+	margin-top: 28px;
 	@include animation(hrule, 40s, linear, 0s, infinite, normal);
 }
 
